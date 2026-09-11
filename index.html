@@ -1,0 +1,184 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Speed Test</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <picture class="typing-logo">
+        <source media="(min-width: 976px)" srcset="logo-large.svg" />
+        <img src="logo-small.svg" alt="Typing Speed Test logo" />
+      </picture>
+      <div class="best-score">
+        <img src="icon-personal-best.svg" alt="" />
+        <p class="best-score-text">Best:<span class="speed">92 WPM</span></p>
+        <p class="best-score-text-2">
+          Personal best:<span class="speed">92 WPM</span>
+        </p>
+      </div>
+    </header>
+    <div class="screen--not-started">
+      <div class="test-status">
+        <div class="speed-accuracy-time-status">
+          <div class="WPM">WPM: <br /><span class="active-wpm">0</span></div>
+          <div class="accuracy">
+            Accuracy: <br /><span class="active-accuracy">100%</span>
+          </div>
+          <div class="time">
+            Time: <br /><span class="active-time">0:60</span>
+          </div>
+        </div>
+        <div class="difficulty-time-status">
+          <div class="difficulty">
+            <button class="arrow-down">Hard</button
+            ><img src="icon-down-arrow.svg" alt="" />
+            <div class="mobile-difficulty-section">
+              <div class="easy">
+                <label class="class-radio">
+                  <input
+                    type="radio"
+                    name="difficulty-radio"
+                    data-difficulty="easy"
+                  />
+                  <span class="checkmark-body"></span>
+                  <span class="checkmark"></span>
+                </label>
+                <p>Easy</p>
+              </div>
+              <div class="medium">
+                <label class="class-radio">
+                  <input
+                    type="radio"
+                    name="difficulty-radio"
+                    data-difficulty="medium"
+                  />
+                  <span class="checkmark-body"></span>
+                  <span class="checkmark"></span>
+                </label>
+                <p>Medium</p>
+              </div>
+              <div class="hard">
+                <label class="class-radio">
+                  <input
+                    type="radio"
+                    name="difficulty-radio"
+                    data-difficulty="hard"
+                    checked
+                  />
+                  <span class="checkmark-body"></span>
+                  <span class="checkmark"></span>
+                </label>
+                <p>Hard</p>
+              </div>
+            </div>
+          </div>
+          <div class="timed">
+            <button class="arrow-down">Timed(60s)</button
+            ><img src="icon-down-arrow.svg" alt="" />
+            <div class="mobile-difficulty-section">
+              <div class="mobile-time">
+                <label class="class-radio-2">
+                  <input
+                    type="radio"
+                    name="test-type"
+                    data-mode="timed"
+                    checked
+                  />
+                  <span class="checkmark-body"></span>
+                  <span class="checkmark"></span>
+                </label>
+                <p>Timed(60s)</p>
+              </div>
+              <div class="mobile-passage">
+                <label class="class-radio-2">
+                  <input type="radio" name="test-type" data-mode="passage" />
+                  <span class="checkmark-body"></span>
+                  <span class="checkmark"></span>
+                </label>
+                <p>Passage</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="difficulty-time-status-desktop">
+          <div class="pill-group pill-group-1">
+            <span class="pill-label">Difficulty:</span>
+            <div class="active-state">
+              <button class="pill pill-1" data-difficulty="easy">Easy</button>
+            </div>
+            <div class="active-state">
+              <button class="pill pill-1" data-difficulty="medium">
+                Medium
+              </button>
+            </div>
+            <div class="active-state">
+              <button class="pill pill-1 pill--active" data-difficulty="hard">
+                Hard
+              </button>
+            </div>
+          </div>
+          <div class="pill-group pill-group-2">
+            <span class="pill-label">Mode:</span>
+            <div class="active-state">
+              <button class="pill Timer pill--active">Timed (60s)</button>
+            </div>
+            <div class="active-state">
+              <button class="pill passage">Passage</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <main class="main-page">
+        <div class="test-status-text"></div>
+        <input
+          type="text"
+          class="hidden-input"
+          autocomplete="off"
+          style="position: absolute; opacity: 0; pointer-events: none"
+        />
+        <div class="starting-test">
+          <button>Start Typing Test</button>
+          <p>Or click the text and start typing</p>
+        </div>
+      </main>
+      <footer class="footer hide">
+        <button class="restart-button">
+          Restart Test <img src="icon-restart.svg" alt="" />
+        </button>
+      </footer>
+    </div>
+    <div class="screen-results hide">
+      <img class="star-1" src="pattern-star-2.svg" alt="" />
+      <div class="desktop-design">
+        <div class="test-accomplished">
+          <img src="icon-completed.svg" alt="" />
+          <p class="test-complete">Test Complete!</p>
+          <p class="test-comment">
+            Solid run. Keep pushing to beat your high score.
+          </p>
+        </div>
+        <div class="test-scores">
+          <div class="wpm-1">
+            WPM:
+            <span class="wpm-1-score">90</span>
+          </div>
+          <div class="accuracy-1">
+            Accuracy: <span class="accuracy-1-score">90%</span>
+          </div>
+          <div class="characters">
+            Characters: <span class="characters-score">120/5</span>
+          </div>
+        </div>
+        <div class="go-again-but">
+          <p>Go Again</p>
+          <img class="restart-button-1" src="icon-restart.svg" alt="" />
+        </div>
+      </div>
+      <img class="star-2" src="pattern-star-1.svg" alt="" />
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
